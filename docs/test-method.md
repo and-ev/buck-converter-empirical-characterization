@@ -13,16 +13,23 @@ original `temp_C_` header.
 | Column | Interpretation | Status |
 |---|---|---|
 | `time_s` | Elapsed test time | Measured |
-| `buck_output_V` | Voltage at the buck-converter output | Measured |
-| `load_voltage_V` | Voltage at the load side of the sensing path | Measured |
-| `current_A` | Load current | Measured |
-| `load_power_W` | Load power channel | Measured |
-| `shunt_voltage_mV` | Voltage across the current-sense shunt | Measured |
-| `temp_C` | Recorded temperature | Measured |
+| `buck_output_V` | Load voltage plus shunt drop | Recorded; derived in reference firmware |
+| `load_voltage_V` | INA226 load-side bus-voltage conversion | Primary sensor reading |
+| `current_A` | Shunt voltage divided by the configured 0.100 ohm value | Recorded; derived in reference firmware |
+| `load_power_W` | Load voltage multiplied by current | Recorded; derived in reference firmware |
+| `shunt_voltage_mV` | INA226 differential shunt-voltage conversion | Primary sensor reading |
+| `temp_C` | Temperature-probe conversion | Primary sensor reading |
 | `voltage_drop_V` | `buck_output_V - load_voltage_V` | Derived |
 | `calculated_load_power_W` | `load_voltage_V * current_A` | Derived |
 | `implied_load_resistance_ohm` | `load_voltage_V / current_A` | Derived |
 | `implied_shunt_resistance_ohm` | `shunt_voltage_mV / current_A` | Derived |
+
+## Firmware disclosure
+
+The original historical acquisition sketch was not supplied. The repository now
+includes a newly written reference logger whose signal derivation, averaging,
+rounding, and cadence are consistent with the CSV. It must not be cited as proof
+that the historical logger used identical constants or filtering.
 
 ## Validation gates
 

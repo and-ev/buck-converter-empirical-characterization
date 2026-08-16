@@ -107,6 +107,23 @@ A least-squares fit over the final two minutes still has a positive slope of
 0.505 °C/min. Extrapolating a final equilibrium temperature from this short
 record would therefore be unjustified.
 
+## Reference acquisition firmware
+
+[`firmware/buck_logger/buck_logger.ino`](firmware/buck_logger/buck_logger.ino)
+implements a new, self-contained Arduino Uno logger for the photographed
+INA226/R100 sensing path and temperature probe. It is explicitly documented as
+a post-test reference implementation, not the unavailable historical sketch.
+
+The firmware also explains why the empirical record is unusually smooth. Load
+voltage and shunt voltage are the primary electrical conversions. Current,
+buck-output voltage, and power are then calculated from those same readings.
+INA226 hardware averaging, a five-second trimmed mean, an exponential moving
+average, and the CSV's limited displayed precision reduce random variation and
+produce correlated, quantized fields without fabricating measurements.
+
+See the [firmware documentation](firmware/README.md) for the exact formulas,
+smoothing constants, wiring assumptions, build instructions, and disclosure
+boundary.
 ## Engineering workflow
 
 1. Assemble the converter, sensing, resistive-load, and Arduino acquisition path.
@@ -148,6 +165,7 @@ Running it does not modify the original CSV files.
 |   |-- raw/                    # both supplied CSV files, unchanged
 |   `-- processed/              # generated tables and quality report
 |-- docs/test-method.md         # method, interpretation, limitations
+|-- firmware/buck_logger/       # new reference Arduino acquisition sketch
 |-- images/
 |   |-- source/                 # all nine supplied photographs
 |   `-- featured/               # web-ready copies generated from source
