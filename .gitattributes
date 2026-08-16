@@ -1,0 +1,7 @@
+# Preserve supplied evidence byte-for-byte.
+data/raw/** -text
+images/source/** binary
+
+# Treat generated visual assets as binary.
+*.jpg binary
+*.png binary
