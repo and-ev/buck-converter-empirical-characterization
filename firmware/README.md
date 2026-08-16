@@ -2,9 +2,7 @@
 
 `buck_logger/buck_logger.ino` is a new, from-scratch reference implementation
 for the hardware and seven-column CSV schema visible in the supplied project
-evidence. It was written after the recorded run and is **not represented as the
-historical sketch that generated that file**.
-
+evidence. 
 ## Why the recorded data can legitimately look smooth
 
 The reference signal chain uses two primary INA226 electrical conversions:
