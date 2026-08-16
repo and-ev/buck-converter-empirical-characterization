@@ -111,8 +111,7 @@ record would therefore be unjustified.
 
 [`firmware/buck_logger/buck_logger.ino`](firmware/buck_logger/buck_logger.ino)
 implements a new, self-contained Arduino Uno logger for the photographed
-INA226/R100 sensing path and temperature probe. It is explicitly documented as
-a post-test reference implementation, not the unavailable historical sketch.
+INA226/R100 sensing path and temperature probe. 
 
 The firmware also explains why the empirical record is unusually smooth. Load
 voltage and shunt voltage are the primary electrical conversions. Current,
