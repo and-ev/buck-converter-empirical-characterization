@@ -1,0 +1,46 @@
+{
+  "data/raw/buck_data.csv": {
+    "bytes": 4882,
+    "sha256": "e8da151cac711b26ff781c12d90aa725d82d34fb98e42343ee630e57b3c02750"
+  },
+  "data/raw/buck_data_new.csv": {
+    "bytes": 4881,
+    "sha256": "66b28fd5a6faf5656ae3fcdf68241ff7a22a320e134a6f68bb1f236b4c7945fd"
+  },
+  "images/source/IMG_7454.jpg": {
+    "bytes": 403541,
+    "sha256": "1488962985952c27665b72e4228aab61b4ff2b4ca88aa7196fab29bcc9f994b7"
+  },
+  "images/source/IMG_7512.jpg": {
+    "bytes": 2148192,
+    "sha256": "867c038d69189608afde4c85d754468d58fc84f1cef8326d0c5945efe0f70b3c"
+  },
+  "images/source/IMG_7514.jpg": {
+    "bytes": 2327724,
+    "sha256": "667cc645bfdacf4c419ad89fc47b89014a49bd352212cf226d39595c17a34a13"
+  },
+  "images/source/IMG_7515.jpg": {
+    "bytes": 2339124,
+    "sha256": "35f5165cdd64d23924dc16354c377889d168e62a04b55979579e3a27b39819ef"
+  },
+  "images/source/IMG_7516.jpg": {
+    "bytes": 2098034,
+    "sha256": "cf9d1110bcda9f1c3c18fe0f41d8d571108f37b812e3a5136aa6bfa7e05c4ff8"
+  },
+  "images/source/IMG_7518.jpg": {
+    "bytes": 2104192,
+    "sha256": "0852098088729d5d4698a663b699e26d330b741abd80b62681789d46880cfb95"
+  },
+  "images/source/IMG_7519.jpg": {
+    "bytes": 1488898,
+    "sha256": "fea11a3abe80024e303a0a36e23d3e7f71552deb6f893b1b5e34296f33f09ab8"
+  },
+  "images/source/IMG_7520.jpg": {
+    "bytes": 1178810,
+    "sha256": "f4a7760e16da7b2f81b46416fc55b6734ae1d78e383bb4a2f7c030235889ff51"
+  },
+  "images/source/IMG_7521.jpg": {
+    "bytes": 1376922,
+    "sha256": "2e68620faf08860e495f9e739c23c9ea0732216a24c952847f644be8e41d2ffe"
+  }
+}

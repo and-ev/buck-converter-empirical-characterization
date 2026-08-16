@@ -1,0 +1,7 @@
+{
+  "schema_exact": true,
+  "121_complete_samples": true,
+  "uniform_5_second_cadence": true,
+  "power_matches_voltage_times_current_within_5_mW": true,
+  "voltage_drop_matches_shunt_reading_within_1_mV": true
+}
