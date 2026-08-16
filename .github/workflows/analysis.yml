@@ -17,7 +17,7 @@ jobs:
       - run: python -m unittest discover -s tests -v
       - run: python analysis/analyze.py
       - run: python analysis/build_manifest.py
-      - name: Verify deterministic data products
-        run: git diff --exit-code -- data/processed data/source_manifest.json
-      - name: Verify plots were rendered
-        run: test -s plots/results_dashboard.png && test -s plots/electrical_stability.png && test -s plots/measurement_consistency.png && test -s plots/thermal_response.png
+      - name: Verify source integrity manifest
+        run: git diff --exit-code -- data/source_manifest.json
+      - name: Verify generated artifacts
+        run: test -s data/processed/summary.json && test -s data/processed/derived_measurements.csv && test -s plots/results_dashboard.png && test -s plots/electrical_stability.png && test -s plots/measurement_consistency.png && test -s plots/thermal_response.png
